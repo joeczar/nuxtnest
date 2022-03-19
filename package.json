@@ -1,0 +1,27 @@
+{
+  "name": "nuxtnest",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:all": "nx run-many --target=dev --all",
+    "build": "nx run build all --stream --no-bail",
+    "start": "nx run start all --stream --no-bail",
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore --fix packages/"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.6.0",
+    "typescript": "~4.2",
+    "@nrwl/workspace": "latest",
+    "@nrwl/cli": "latest",
+    "@nrwl/tao": "latest",
+    "@nrwl/nx-cloud": "latest"
+  }
+}

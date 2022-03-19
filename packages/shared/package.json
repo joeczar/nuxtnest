@@ -1,0 +1,17 @@
+{
+  "name": "@nuxtnest/shared",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "env-var": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0"
+  }
+}

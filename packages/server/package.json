@@ -1,0 +1,23 @@
+{
+  "name": "@nuxtnest/server",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev --no-notify src/main.ts --transpileOnly",
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@nuxtnest/shared": "file:../shared",
+    "@nestjs/common": "^8.4.1",
+    "@nestjs/core": "^8.4.1",
+    "@nestjs/platform-express": "^8.4.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.5"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8"
+  }
+}
