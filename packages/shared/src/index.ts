@@ -1,1 +1,1 @@
-export * from './envconfig';
+export * from './ConfigService';

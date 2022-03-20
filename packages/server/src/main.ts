@@ -1,9 +1,17 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { envConfig } from '@nuxtnest/shared';
+import 'dotenv/config';
+import * as cookieParser from 'cookie-parser';
+
+import { Logger } from '@nestjs/common';
+import { configService } from './config/config.service';
+
+const port = configService.getValue('SERVER_PORT')
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(envConfig.serverPort || 4000);
+  app.use(cookieParser());
+  await app.listen(port);
+  Logger.log(`Server started running on http://localhost:${port}`, 'Bootstrap');
 }
 bootstrap();
