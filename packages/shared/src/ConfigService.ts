@@ -1,12 +1,14 @@
+import { EnvConfig } from './../dist/envconfig.d';
 import * as env from 'env-var';
 import { config } from 'dotenv';
 import { resolve } from 'path';
 
 config({ path: resolve(__dirname, '../../../.env') });
 
-export interface EnvConfig {
+export interface EnvConfigBase {
   CLIENT_PORT: number;
   SERVER_PORT: number;
+  API_URL: string;
   POSTGRES_USER: string;
   POSTGRES_PASSWORD: string;
   POSTGRES_DATABASE: string;
@@ -20,7 +22,8 @@ export interface EnvConfig {
   JWT_REFRESH_TOKEN_EXPIRATION_TIME: string;
 }
 export class ConfigService {
-  constructor(private env: { [k: string]: string | number| undefined }) { }
+
+  constructor(private env: EnvConfigBase) { }
 
   public getValue(key: string, throwOnMissing = true): string | number {
     const value = this.env[key];
@@ -45,10 +48,11 @@ export class ConfigService {
     return mode != 'DEV';
   }
 }
-
-export const baseConfigService = new ConfigService(process.env).ensureValues([
+const base = process.env as unknown as EnvConfigBase
+export const baseConfigService = new ConfigService(base).ensureValues([
   'CLIENT_PORT',
   'SERVER_PORT',
+  'API_URL',
   'POSTGRES_USER',
   'POSTGRES_PASSWORD',
   'POSTGRES_DATABASE',

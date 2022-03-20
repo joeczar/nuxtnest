@@ -21,7 +21,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "start:dev:db": "./src/scripts/start-db.sh",
     "typeorm:cli": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -f ormconfig.js",
-    "migration:generate": "yarn run typeorm migration:generate -n"
+    "migration:generate": "yarn run typeorm migration:generate -n",
+    "prepare": "cd ../../../../ husky install"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
@@ -80,7 +81,7 @@
       "json",
       "ts"
     ],
-    "rootDir": "src",
+    "rootDir": "./src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"

@@ -1,0 +1,17 @@
+{
+  "LabelAndValue": {
+    "description": "Auto imported from components/LabelAndValue.vue"
+  },
+  "MainNav": {
+    "description": "Auto imported from components/MainNav.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  },
+  "VuetifyLogo": {
+    "description": "Auto imported from components/VuetifyLogo.vue"
+  }
+}

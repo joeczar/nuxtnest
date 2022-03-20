@@ -1,6 +1,6 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 // import { TypeOrmModuleOtions } from '@nestjs/passport';
-import { ConfigService as BaseConfigService } from '@nuxtnest/shared';
+import { ConfigService as BaseConfigService, EnvConfigBase } from '@nuxtnest/shared';
 import { resolve } from 'path';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config({ path: resolve(__dirname, '../../.env') });
@@ -33,8 +33,8 @@ class TypeOrmConfigService extends BaseConfigService {
     };
   }
 }
-
-const configService = new TypeOrmConfigService(process.env).ensureValues([
+const base = process.env as unknown as EnvConfigBase
+const configService = new TypeOrmConfigService(base).ensureValues([
   'CLIENT_PORT',
     'SERVER_PORT',
     'POSTGRES_USER',

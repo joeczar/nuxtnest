@@ -1,0 +1,58 @@
+[
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_9c00c81a"
+  },
+  {
+    "name": "logout",
+    "path": "/logout",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/logout.vue",
+    "chunkName": "pages/logout",
+    "_name": "_49f62a20"
+  },
+  {
+    "name": "order",
+    "path": "/order",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/order.vue",
+    "chunkName": "pages/order",
+    "_name": "_0122b958"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_2bb541b3"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_c253d7ee"
+  },
+  {
+    "name": "thanks",
+    "path": "/thanks",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/thanks.vue",
+    "chunkName": "pages/thanks",
+    "_name": "_8bb4d6a2"
+  },
+  {
+    "name": "thanks-for-registering",
+    "path": "/thanks-for-registering",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/thanks-for-registering.vue",
+    "chunkName": "pages/thanks-for-registering",
+    "_name": "_dbb2e986"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/l8joe.czarnecki/OneDrive/Code/bibApp/breakfastInBed/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2f500e48"
+  }
+]
